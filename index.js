@@ -9,18 +9,18 @@ function populateList() {
   return data
 }
 const data = populateList()
-
-const html = {
-  get(element) {
-    return document.querySelector(element)
-  }
-}
-
+// ===================================================================
 let perPage = 5
 const state = {
   page: 1,
   perPage,
   totalPage: Math.ceil(data.length / perPage)
+}
+
+const html = {
+  get(element) {
+    return document.querySelector(element)
+  }
 }
 
 const controls = {
